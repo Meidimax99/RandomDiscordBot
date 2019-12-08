@@ -1,0 +1,16 @@
+{
+  "name": "newbot",
+  "version": "1.0.0",
+  "description": "First testbot",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Meidimax",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.5.1",
+    "eslint": "^6.7.2",
+    "node-opus": "^0.3.3"
+  }
+}

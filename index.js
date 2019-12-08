@@ -45,7 +45,9 @@ client.on('message', message => {
             case 'run':
                 var channel = message.member.voiceChannel
                     if(channel) {
-                        joinChannel(channel);
+                        joinChannel(channel).then(connection => {
+                            const dispatcher = connection.playFile('./assets/audio/run.mp3');
+                        });
                     }
             break;
 
@@ -90,11 +92,5 @@ client.on('voiceStateUpdate', function (oldMember, newMember){
         }
 });
 
-function joinChannel(channel) {
-    channel.join().then(connection => {
-        console.log("Successfully connected.");
-    }).catch(e => {
-        console.error(e);
-    });
-}
+
 client.login(token);
